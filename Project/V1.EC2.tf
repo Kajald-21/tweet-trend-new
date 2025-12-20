@@ -6,6 +6,7 @@ resource "aws_instance" "demo-sg" {
     ami = "ami-0c44f651ab5e9285f"
     instance_type = "t3.micro"
     key_name = "Demo1"
+    security_groups = ["SSH-Access"]
 }
 
 resource "aws_security_group" "SSH-Access" {
@@ -18,7 +19,7 @@ resource "aws_security_group" "SSH-Access" {
         protocol    = "tcp"
         cidr_blocks = ["0.0.0.0/0"] 
 
-}  
+    }  
     egress {
         from_port = 0
         to_port = 0
