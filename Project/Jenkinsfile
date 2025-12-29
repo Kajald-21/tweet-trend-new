@@ -6,11 +6,3 @@ pipeline {
         }
     }
 
-    stages {
-        stage('git clone') {
-            steps {
-               git branch: 'main', url:'https://github.com/Kajald-21/tweet-trend.git'
-            }
-        }
-    }
-}
