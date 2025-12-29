@@ -9,7 +9,7 @@
 
   - name: Install Java (Amazon Linux)
     yum:
-      name: java-11-amazon-corretto
+      name: java-17-amazon-corretto
       state: present    
 
   - name: download maven packages
